@@ -48,6 +48,7 @@ function Read-Password
         $StringPassword = [System.Runtime.InteropServices.Marshal]::PtrToStringBSTR($bstr)
 
         Set-Clipboard $StringPassword
+        Write-Host ($Ident)
         Write-Host ('コピー完了: ' + $StringPassword)
         $modifier = [ConsoleModifiers]::Control
         # Pause
